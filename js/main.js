@@ -55,4 +55,23 @@ function reves (str) {
     } // for indice
     return tmpStr;
 }
-  
+  /* 
+  Palindromo: palabra o expresión que es igual si se lee de izquierda a derecha que de derecha a izquierda
+    amma
+    Otto
+    Anina
+    Natan
+    Ana
+    Ada
+  */
+    function esPalindromo (str) {
+        //toLowerCase se usa para convetir todas las teras a minusculas
+        str = str.toLowerCase();
+        //replaceAll se usa para omitir los espacios
+        str = str.replaceAll(" ", "");
+        //Se crea el iff con la función que ya tenemos creada comparando str
+        if (reves (str)==str)
+            return true;
+
+        return false;
+    }
